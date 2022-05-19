@@ -13,8 +13,10 @@ const Wrapper = styled.div`
 	align-items: center;
 	width: 84%;
 	margin: auto;
+
 	@media (max-width: 600px) {
 		width: 95%;
+		flex-direction: column;
 	}
 	@media (min-width: 601px) and (max-width: 1024px) {
 		width: 90%;
@@ -38,7 +40,7 @@ const LogoImage = styled.img`
 	margin-right: 0.5rem;
 
 	@media (max-width: 600px) {
-		width: 2.5rem;
+		width: 5rem;
 	}
 	@media (min-width: 601px) and (max-width: 1024px) {
 		width: 2rem;
@@ -49,9 +51,14 @@ const LogoImage = styled.img`
 const DesktopWrapper = styled.div`
 	display: flex;
 	flex-grow: 1;
-	margin-left: 3rem;
-	@media (max-width: 1024px) {
-		display: none;
+
+	@media (max-width: 600px) {
+		flex-direction: column;
+		width: 100%;
+		margin-left: 0;
+		padding-block: 2rem;
+	}
+	@media (min-width: 601px) and (max-width: 1024px) {
 	}
 `;
 
@@ -65,6 +72,9 @@ const ButtonBox = styled.div`
 	&:hover {
 		background-color: var(--MainColor);
 		transition: all 0.2s ease-in-out;
+	}
+	@media (max-width: 600px) {
+		text-align: center;
 	}
 `;
 
@@ -82,26 +92,31 @@ const DesktopButton = styled.button`
 		color: #fff;
 		transition: all 0.2s ease-in-out;
 	}
+	@media (min-width: 601px) and (max-width: 1024px) {
+		font-size: var(--TabletFont);
+	}
 `;
 
 // social media button
 const SocialMediaWrapper = styled.div`
-	@media (max-width: 1024px) {
-		display: none;
-	}
+	display: flex;
+	align-items: center;
+	gap: 1rem;
 `;
 
 const Icon = styled.img`
-	width: 2.5rem;
-	margin-right: 0.5rem;
+	width: 2rem;
+	height: 100%;
+	object-fit: contain;
 	cursor: pointer;
+
 	&:hover {
 		transform: scale(1.1);
 		transition: all 0.35s ease-in-out;
 	}
 	@media (max-width: 600px) {
-		width: 2.5rem;
-		margin: 1rem 1rem 0 0;
+		width: 2.2rem;
+		gap: 1rem;
 	}
 	@media (min-width: 601px) and (max-width: 1024px) {
 		width: 1.2rem;
@@ -116,6 +131,7 @@ const Icon = styled.img`
 const RightContainer = styled.div`
 	padding: 4rem 0 0 0;
 	text-align: center;
+
 	@media (min-width: 601px) and (max-width: 1024px) {
 		padding-top: 2rem;
 	}
@@ -126,6 +142,7 @@ const RightText = styled.p`
 	color: var(--lightDescriptionColor);
 	letter-spacing: 1px;
 	line-height: 1.5;
+
 	@media (min-width: 601px) and (max-width: 1024px) {
 		font-size: 0.6rem;
 	}
@@ -181,16 +198,16 @@ export default function Footer() {
 
 				<SocialMediaWrapper>
 					<Link href='/' passHref>
-						<Icon src='' alt='Zeeshan Social Media' />
+						<Icon src='/Icons/github-sign-min.png' alt='Zeeshan Social Media' />
 					</Link>
 					<Link href='/' passHref>
-						<Icon src='' alt='Zeeshan Social Media' />
+						<Icon src='/Icons/linkedin-min.png' alt='Zeeshan Social Media' />
 					</Link>
 					<Link href='/' passHref>
-						<Icon src='' alt='Zeeshan Social Media' />
+						<Icon src='/Icons/unsplash-min.png' alt='Zeeshan Social Media' />
 					</Link>
 					<Link href='/' passHref>
-						<Icon src='' alt='Zeeshan Social Media' />
+						<Icon src='/Icons/email-min.png' alt='Zeeshan Social Media' />
 					</Link>
 				</SocialMediaWrapper>
 			</Wrapper>

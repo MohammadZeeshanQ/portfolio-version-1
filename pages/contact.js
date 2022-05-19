@@ -130,9 +130,11 @@ const SubmitButtonBox = styled.div`
 export default function contact() {
 	const [successOpen, setSuccessOpen] = useState(false);
 	const [errorOpen, setErrorOpen] = useState(false);
-	const emailService = process.env.REACT_APP_EMAILSERVICE;
-	const emailTemplate = process.env.REACT_APP_EMAILTEMPLATE;
-	const emailEmailKey = process.env.REACT_APP_EMAILKEY;
+	const emailService = process.env.NEXT_PUBLIC__EMAILSERVICE;
+	const emailTemplate = process.env.NEXT_PUBLIC__EMAILTEMPLATE;
+	const emailEmailKey = process.env.NEXT_PUBLIC__EMAILKEY;
+
+	console.log(emailService, emailTemplate);
 
 	// send form handler
 	const sendEmail = (e) => {
