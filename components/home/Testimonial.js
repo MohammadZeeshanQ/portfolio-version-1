@@ -10,7 +10,10 @@ import "slick-carousel/slick/slick-theme.css";
 import HeaderComponent from "../shared/Header";
 
 // style
-const Container = styled.section``;
+const Container = styled.section`
+	background-color: var(--ThirdColor);
+	padding: 4rem 0 8rem 0;
+`;
 
 const Wrapper = styled.div`
 	width: 83%;

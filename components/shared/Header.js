@@ -5,7 +5,7 @@ export default function Header({ children, textColor }) {
 	// style
 	const HeaderWrapper = styled.div`
 		text-align: center;
-		padding: 3rem 0 4rem 0;
+		padding: 1rem 0 2rem 0;
 	`;
 
 	const Header = styled.h2`
