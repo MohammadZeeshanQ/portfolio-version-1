@@ -3,6 +3,11 @@ import styled, { keyframes } from "styled-components";
 import Link from "next/link";
 import Typical from "react-typical";
 
+// shared components
+import HeaderHighlight from "../shared/HeaderHighlight";
+import PrimaryButton from "../shared/PrimaryButton";
+import SecondaryButton from "../shared/SecondaryButton";
+
 // Icons
 import SendIcon from "@mui/icons-material/Send";
 import DeveloperBoardIcon from "@mui/icons-material/DeveloperBoard";
@@ -99,11 +104,6 @@ const Header = styled.h1`
 	}
 `;
 
-const HeaderColor = styled.span`
-	color: var(--MainColor);
-	font-weight: 800;
-`;
-
 const Description = styled.p`
 	color: var(--SecondColor);
 	font-size: 1.2rem;
@@ -127,60 +127,9 @@ const ButtonBox = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 3rem;
-`;
-
-const ButtonTheme = styled.button`
-	/* display */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	/* font */
-	font-size: 0.95rem;
-	font-weight: 500;
-	letter-spacing: 1px;
-	/* border */
-	border: none;
-	border-radius: 0.3rem;
-	cursor: pointer;
-	padding: 0.7rem 1rem;
-
-	&:hover {
-		box-shadow: 3px 3px 10px var(--ButtonHover);
-		transform: scale(1.01);
-		transition: all 0.25s ease-in-out;
-	}
-
-	@media (max-width: 600px) {
-		font-size: var(--MobileFont);
-	}
-	@media (min-width: 601px) and (max-width: 1024px) {
-		font-size: 0.7rem;
-		padding: 0.5rem 1rem;
-	}
-`;
-
-const ContactButton = styled(ButtonTheme)`
-	color: #fff;
-	background-color: var(--MainColor);
-	margin-right: 1.5rem;
-
-	@media (max-width: 600px) {
-		margin-right: 1rem;
-	}
-`;
-
-const ProjectButton = styled(ButtonTheme)`
-	color: var(--MainColor);
-	background-color: transparent;
-	/* border and padding */
-	padding: 0.65rem 1rem;
-	border: 1px solid var(--MainColor);
-
-	@media (min-width: 601px) and (max-width: 1024px) {
-		font-size: 0.7rem;
-		padding: 0.5rem 1rem;
-	}
+	gap: 1rem;
+	/* margin */
+	margin-top: 4rem;
 `;
 
 export default function Hero() {
@@ -192,7 +141,7 @@ export default function Hero() {
 			<Wrapper>
 				<HeaderBox>
 					<Header>
-						My Name Is <HeaderColor>Zeeshan</HeaderColor>
+						My Name Is <HeaderHighlight>Zeeshan</HeaderHighlight>
 					</Header>
 					<Description>
 						<Typical
@@ -212,12 +161,12 @@ export default function Hero() {
 					</Description>
 					{/* CTA Buttons */}
 					<ButtonBox>
-						<ContactButton>
+						<PrimaryButton>
 							Contact Me <SendIcon fontSize='small' sx={{ marginLeft: "1rem" }} />
-						</ContactButton>
-						<ProjectButton>
+						</PrimaryButton>
+						<SecondaryButton>
 							Projects <DeveloperBoardIcon fontSize='small' sx={{ marginLeft: "1rem" }} />
-						</ProjectButton>
+						</SecondaryButton>
 					</ButtonBox>
 				</HeaderBox>
 			</Wrapper>
