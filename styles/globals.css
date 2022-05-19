@@ -1,0 +1,60 @@
+/*Root Color   */
+:root {
+	/* Color Palates */
+	--MainColor: #9400d3;
+	--SecondColor: #6d7b8d;
+	--TextMainColor: #36013f;
+	--TextHighlightColor: #9400d3;
+	--TextSecondColor: #6d7b8d;
+	--ButtonHover: #e5e4e2;
+	--BoxShadow: #f5fffa;
+
+	/* Text Font Sizes */
+	--PcFont: 0.9rem;
+	--MobileFont: 0.9rem;
+	--TabletFont: 0.8rem;
+	--PcFontSmall: 0.85rem;
+	--MobileFontSmall: 0.7rem;
+	--TabletFontSmall: 0.55rem;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #fff;
+	font-family: "Nunito", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+		Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+button {
+	font-family: Nunito;
+}
+
+@media screen and (max-device-width: 600px) {
+	body {
+		-webkit-text-size-adjust: 100%;
+	}
+}
+
+/* Selection Color */
+::-moz-selection {
+	/* Code for Firefox */
+	/* color: var(--whiteColor);
+	background: var(--darkRedColor); */
+}
+
+::selection {
+	/* color: var(--whiteColor);
+	background: var(--darkRedColor); */
+}
