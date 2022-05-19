@@ -58,7 +58,7 @@ const LogoImage = styled.img`
 const DesktopWrapper = styled.div`
 	display: flex;
 	flex-grow: 1;
-	margin-left: 3rem;
+
 	@media (max-width: 1024px) {
 		display: none;
 	}
