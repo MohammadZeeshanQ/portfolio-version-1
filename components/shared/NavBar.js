@@ -58,6 +58,7 @@ const LogoImage = styled.img`
 	height: 100%;
 	object-fit: cover;
 	margin-right: 0.5rem;
+
 	@media (max-width: 600px) {
 		width: 2.5rem;
 	}
@@ -118,7 +119,7 @@ const CTAButtonTheme = styled.button`
 	border: none;
 	border-radius: 0.5rem;
 	cursor: pointer;
-	letter-spacing: 0.5px;
+	letter-spacing: 1px;
 	padding: 0.8rem 1.5rem;
 
 	@media (max-width: 600px) {
