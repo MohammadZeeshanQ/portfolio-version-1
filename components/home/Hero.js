@@ -1,8 +1,7 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Link from "next/link";
 import Typical from "react-typical";
-import { style } from "@mui/system";
 
 // Icons
 import SendIcon from "@mui/icons-material/Send";
@@ -12,6 +11,61 @@ import DeveloperBoardIcon from "@mui/icons-material/DeveloperBoard";
 const Container = styled.section`
 	position: relative;
 	padding: 10rem 0;
+	z-index: 0;
+	overflow: hidden;
+`;
+
+const opacity = keyframes`
+  from {
+	opacity: 0;
+  }
+
+  to {
+	opacity: .8;
+  }
+`;
+
+const StarImage = styled.img`
+	/* position */
+	position: absolute;
+	top: -25%;
+	right: 5%;
+	/* size */
+	width: 3rem;
+	height: 100%;
+	object-fit: contain;
+	z-index: -1;
+	/* animation */
+	animation: ${opacity} 4s alternate infinite;
+	transform: rotate(120deg);
+
+	@media (max-width: 600px) {
+		width: 4rem;
+		top: -34%;
+		right: -5%;
+	}
+`;
+
+const CodeImage = styled.img`
+	/* position */
+	position: absolute;
+	bottom: -30%;
+	left: 5%;
+	/* size */
+	width: 3rem;
+	height: 100%;
+	object-fit: contain;
+	z-index: -1;
+	/*  */
+	animation: ${opacity} 4s alternate infinite;
+	animation-delay: 1s;
+	transform: rotate(45deg);
+
+	@media (max-width: 600px) {
+		width: 4rem;
+		bottom: -30%;
+		left: -10%;
+	}
 `;
 
 const Wrapper = styled.div`
@@ -28,6 +82,7 @@ const Wrapper = styled.div`
 
 const HeaderBox = styled.div`
 	text-align: center;
+	padding-block: 2rem;
 `;
 
 const Header = styled.h1`
@@ -35,6 +90,13 @@ const Header = styled.h1`
 	font-size: 3.5rem;
 	font-weight: 700;
 	letter-spacing: 1px;
+
+	@media (max-width: 600px) {
+		font-size: 3rem;
+	}
+	@media (min-width: 601px) and (max-width: 1024px) {
+		font-size: 2.5rem;
+	}
 `;
 
 const HeaderColor = styled.span`
@@ -52,9 +114,10 @@ const Description = styled.p`
 
 	@media (max-width: 600px) {
 		line-height: 190%;
+		font-size: 1rem;
 	}
 	@media (min-width: 601px) and (max-width: 1024px) {
-		font-size: 1rem;
+		font-size: 0.9rem;
 		width: 90%;
 	}
 `;
@@ -92,8 +155,8 @@ const ButtonTheme = styled.button`
 		font-size: var(--MobileFont);
 	}
 	@media (min-width: 601px) and (max-width: 1024px) {
-		font-size: 0.65rem;
-		padding: 0.6rem 1rem;
+		font-size: 0.7rem;
+		padding: 0.5rem 1rem;
 	}
 `;
 
@@ -101,6 +164,10 @@ const ContactButton = styled(ButtonTheme)`
 	color: #fff;
 	background-color: var(--MainColor);
 	margin-right: 1.5rem;
+
+	@media (max-width: 600px) {
+		margin-right: 1rem;
+	}
 `;
 
 const ProjectButton = styled(ButtonTheme)`
@@ -109,11 +176,19 @@ const ProjectButton = styled(ButtonTheme)`
 	/* border and padding */
 	padding: 0.65rem 1rem;
 	border: 1px solid var(--MainColor);
+
+	@media (min-width: 601px) and (max-width: 1024px) {
+		font-size: 0.7rem;
+		padding: 0.5rem 1rem;
+	}
 `;
 
 export default function Hero() {
 	return (
 		<Container>
+			{/* background Image */}
+			<StarImage src='/Icons/stars.png' alt='star Image' />
+			<CodeImage src='/Icons/coding.png' alt='code Image' />
 			<Wrapper>
 				<HeaderBox>
 					<Header>

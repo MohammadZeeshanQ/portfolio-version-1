@@ -31,24 +31,12 @@ const ImageWrapper = styled.div`
 	align-items: center;
 `;
 
-const LogoText = styled.p`
-	color: var(--TextMainColor);
-	font-size: 1.5rem;
-	font-weight: 700;
-	letter-spacing: 1px;
-	@media (max-width: 600px) {
-		font-size: 0.9rem;
-	}
-	@media (min-width: 601px) and (max-width: 1024px) {
-		font-size: 0.8rem;
-	}
-`;
-
 const LogoImage = styled.img`
-	width: 2.6rem;
+	width: 3rem;
 	height: 100%;
-	object-fit: cover;
+	object-fit: contain;
 	margin-right: 0.5rem;
+
 	@media (max-width: 600px) {
 		width: 2.5rem;
 	}
@@ -164,8 +152,7 @@ export default function Footer() {
 			<Wrapper>
 				<LogoWrapper>
 					<ImageWrapper>
-						<LogoImage src='' alt='Zeeshan Logo' />
-						<LogoText>Zeeshan</LogoText>
+						<LogoImage src='/ZNLogo.png' alt='Zeeshan Logo' />
 					</ImageWrapper>
 				</LogoWrapper>
 
@@ -193,16 +180,16 @@ export default function Footer() {
 				</DesktopWrapper>
 
 				<SocialMediaWrapper>
-					<Link href='' passHref>
+					<Link href='/' passHref>
 						<Icon src='' alt='Zeeshan Social Media' />
 					</Link>
-					<Link href='' passHref>
+					<Link href='/' passHref>
 						<Icon src='' alt='Zeeshan Social Media' />
 					</Link>
-					<Link href='' passHref>
+					<Link href='/' passHref>
 						<Icon src='' alt='Zeeshan Social Media' />
 					</Link>
-					<Link href='' passHref>
+					<Link href='/' passHref>
 						<Icon src='' alt='Zeeshan Social Media' />
 					</Link>
 				</SocialMediaWrapper>

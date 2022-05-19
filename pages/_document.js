@@ -7,6 +7,7 @@ export default class MyDocument extends Document {
 			<Html lang='en'>
 				<Head>
 					{/* Add Favicon and Meta tags here */}
+					<link rel='icon' href='/favicon.ico' />
 					<link rel='preconnect' href='https://fonts.googleapis.com' />
 					<link rel='preconnect' href='https://fonts.gstatic.com' />
 					<link

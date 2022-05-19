@@ -20,6 +20,7 @@ const Wrapper = styled.div`
 	align-items: center;
 	width: 84%;
 	margin: auto;
+
 	@media (max-width: 600px) {
 		width: 95%;
 	}
@@ -31,33 +32,20 @@ const Wrapper = styled.div`
 const LogoWrapper = styled.div`
 	flex-grow: 1;
 	display: flex;
+	align-items: stretch;
 `;
 
 const ImageWrapper = styled.div`
 	display: flex;
-	align-items: center;
-`;
-
-const LogoText = styled.p`
-	color: var(--TextMainColor);
-	font-size: 1.5rem;
-	font-weight: 700;
-	letter-spacing: 1px;
-	@media (max-width: 600px) {
-		font-size: 0.9rem;
-	}
-	@media (min-width: 601px) and (max-width: 1024px) {
-		font-size: 0.8rem;
-	}
+	align-items: stretch;
 `;
 
 const Logo = styled.a``;
 
 const LogoImage = styled.img`
-	width: 2.6rem;
+	width: 3rem;
 	height: 100%;
 	object-fit: cover;
-	margin-right: 0.5rem;
 
 	@media (max-width: 600px) {
 		width: 2.5rem;
@@ -155,12 +143,11 @@ export default function NavBar() {
 				<Toolbar>
 					<Wrapper>
 						<LogoWrapper>
-							<Logo href='/'>
+							<Link href='/' passHref>
 								<ImageWrapper>
-									<LogoImage alt='Zeeshan Logo' src='' />
-									<LogoText>Zeeshan</LogoText>
+									<LogoImage src='/ZNLogo.png' alt='Zeeshan Logo' />
 								</ImageWrapper>
-							</Logo>
+							</Link>
 						</LogoWrapper>
 
 						<DesktopWrapper>
