@@ -9,7 +9,7 @@ import PrimaryButton from "../shared/PrimaryButton";
 // style
 const Container = styled.section`
 	background-color: var(--ThirdColor);
-	padding: 4rem 0 8rem 0;
+	padding: 4rem 0;
 `;
 
 const Wrapper = styled.div`
@@ -23,6 +23,7 @@ const Wrapper = styled.div`
 		width: 90%;
 	}
 `;
+
 const SliderContainer = styled.div`
 	display: block;
 	margin: auto;

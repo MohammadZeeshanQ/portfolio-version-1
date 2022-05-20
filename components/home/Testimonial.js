@@ -11,8 +11,11 @@ import HeaderComponent from "../shared/Header";
 
 // style
 const Container = styled.section`
+	position: relative;
 	background-color: var(--ThirdColor);
 	padding: 4rem 0 8rem 0;
+	z-index: 0;
+	overflow: hidden;
 `;
 
 const Wrapper = styled.div`
@@ -26,6 +29,25 @@ const Wrapper = styled.div`
 		width: 90%;
 	}
 `;
+
+const LargeText = styled.p`
+	/* font */
+	font-size: 25rem;
+	font-weight: 900;
+	/* position */
+	position: absolute;
+	bottom: -35%;
+	right: -20%;
+	z-index: -1;
+	transform: rotate(-30deg);
+	opacity: 0.2;
+
+	@media (max-width: 600px) {
+	}
+	@media (min-width: 601px) and (max-width: 1024px) {
+	}
+`;
+
 const SliderContainer = styled.div`
 	display: block;
 	margin: auto;
@@ -101,6 +123,7 @@ export default function Testimonial() {
 	];
 	return (
 		<Container>
+			<LargeText>TRUST</LargeText>
 			<Wrapper>
 				<HeaderComponent textColor='var(--TextMainColor)'>Testimonials</HeaderComponent>
 				<SliderContainer>

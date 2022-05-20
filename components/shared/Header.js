@@ -13,6 +13,7 @@ export default function Header({ children, textColor }) {
 		/* font */
 		font-size: 2.5rem;
 		letter-spacing: 1px;
+		text-transform: capitalize;
 
 		@media (max-width: 600px) {
 			font-size: 2rem;
