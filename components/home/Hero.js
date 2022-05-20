@@ -18,6 +18,10 @@ const Container = styled.section`
 	padding: 10rem 0;
 	z-index: 0;
 	overflow: hidden;
+
+	@media (min-width: 601px) and (max-width: 1024px) {
+		padding: 6rem 0;
+	}
 `;
 
 const opacity = keyframes`

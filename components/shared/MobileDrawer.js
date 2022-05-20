@@ -13,10 +13,6 @@ const MobileDrawer = ({ drawer, setDrawer }) => {
 		border-radius: 0.2rem;
 	`;
 
-	const AccordionCustomWrapper = styled.div`
-		width: 100%;
-	`;
-
 	const MobileButton = styled.button`
 		color: var(--redColor);
 		font-size: 1rem;
@@ -30,6 +26,10 @@ const MobileDrawer = ({ drawer, setDrawer }) => {
 		padding: 0.5rem 0;
 		width: 100%;
 		cursor: pointer;
+
+		@media (min-width: 601px) and (max-width: 1024px) {
+			font-size: var(--TabletFont);
+		}
 	`;
 
 	// Drawer Handler for Tablet and Mobile device

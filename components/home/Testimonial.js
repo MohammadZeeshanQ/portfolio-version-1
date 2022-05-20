@@ -16,6 +16,10 @@ const Container = styled.section`
 	padding: 4rem 0 8rem 0;
 	z-index: 0;
 	overflow: hidden;
+
+	@media (min-width: 601px) and (max-width: 1024px) {
+		padding: 3rem 0;
+	}
 `;
 
 const Wrapper = styled.div`
@@ -26,7 +30,7 @@ const Wrapper = styled.div`
 		width: 95%;
 	}
 	@media (min-width: 601px) and (max-width: 1024px) {
-		width: 90%;
+		width: 80%;
 	}
 `;
 
@@ -49,6 +53,9 @@ const LargeText = styled.p`
 		opacity: 0.05;
 	}
 	@media (min-width: 601px) and (max-width: 1024px) {
+		font-size: 15rem;
+		bottom: -5%;
+		opacity: 0.1;
 	}
 `;
 
@@ -60,6 +67,9 @@ const SliderContainer = styled.div`
 	@media (max-width: 600px) {
 		padding: 0;
 	}
+	@media (min-width: 601px) and (max-width: 1024px) {
+		padding: 0;
+	}
 `;
 
 const SliderBox = styled.div`
@@ -67,6 +77,9 @@ const SliderBox = styled.div`
 
 	@media (max-width: 600px) {
 		padding: 0.5rem;
+	}
+	@media (min-width: 601px) and (max-width: 1024px) {
+		padding: 0;
 	}
 `;
 

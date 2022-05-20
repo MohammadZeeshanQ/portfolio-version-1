@@ -44,8 +44,8 @@ const Button = styled.button`
 		font-size: var(--MobileFont);
 	}
 	@media (min-width: 601px) and (max-width: 1024px) {
-		font-size: var(--TabletFont);
-		padding: 0.6rem 1rem;
+		font-size: var(--TabletFontSmall);
+		padding: 0.5rem 1rem;
 	}
 `;
 

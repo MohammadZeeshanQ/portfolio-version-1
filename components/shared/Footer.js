@@ -93,7 +93,7 @@ const DesktopButton = styled.button`
 		transition: all 0.2s ease-in-out;
 	}
 	@media (min-width: 601px) and (max-width: 1024px) {
-		font-size: var(--TabletFont);
+		font-size: var(--TabletFontSmall);
 	}
 `;
 

@@ -42,6 +42,10 @@ const Header = styled.h3`
 
 	/* margin */
 	margin-top: 0.5rem;
+
+	@media (min-width: 601px) and (max-width: 1024px) {
+		font-size: 1rem;
+	}
 `;
 
 const ButtonWrapper = styled.div`
@@ -75,19 +79,19 @@ export default function LatestProjects() {
 			header: "Future Dimensions",
 			imagePath: "/newProjects/NewProject1-min.png",
 			buttonLink: "",
-			topMargin: { mt: { xs: 0, md: 14, md: 14 } },
+			topMargin: { mt: { xs: 0, sm: 10, md: 14 } },
 		},
 		{
 			header: "Codebook.io",
 			imagePath: "/newProjects/NewProject2-min.png",
 			buttonLink: "",
-			topMargin: { mt: { xs: 0, md: 6, md: 6 } },
+			topMargin: { mt: { xs: 0, sm: 4, md: 6 } },
 		},
 		{
 			header: "STAN Team",
 			imagePath: "/newProjects/NewProject3-min.png",
 			buttonLink: "",
-			topMargin: { mt: { xs: 0, md: 0, md: 0 } },
+			topMargin: { mt: { xs: 0, sm: 0, md: 0 } },
 		},
 	];
 	return (
