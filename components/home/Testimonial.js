@@ -43,6 +43,10 @@ const LargeText = styled.p`
 	opacity: 0.2;
 
 	@media (max-width: 600px) {
+		font-size: 20rem;
+		bottom: -25%;
+		right: -30%;
+		opacity: 0.05;
 	}
 	@media (min-width: 601px) and (max-width: 1024px) {
 	}
@@ -54,7 +58,7 @@ const SliderContainer = styled.div`
 	padding: 2rem;
 
 	@media (max-width: 600px) {
-		padding: 1rem;
+		padding: 0;
 	}
 `;
 
@@ -82,6 +86,7 @@ export default function Testimonial() {
 		slidesToScroll: 1,
 		initialSlide: 0,
 		autoplay: true,
+		centerMode: true,
 		autoplaySpeed: 4000,
 		responsive: [
 			{

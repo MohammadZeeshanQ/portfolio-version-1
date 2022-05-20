@@ -8,8 +8,11 @@ import PrimaryButton from "../shared/PrimaryButton";
 
 // style
 const Container = styled.section`
+	position: relative;
 	background-color: var(--ThirdColor);
 	padding: 4rem 0;
+	z-index: 0;
+	overflow: hidden;
 `;
 
 const Wrapper = styled.div`
@@ -24,10 +27,32 @@ const Wrapper = styled.div`
 	}
 `;
 
+const LargeText = styled.p`
+	/* font */
+	font-size: 20rem;
+	font-weight: 900;
+	/* position */
+	position: absolute;
+	bottom: -5%;
+	left: -20%;
+	z-index: -1;
+	transform: rotate(30deg);
+	opacity: 0.1;
+
+	@media (max-width: 600px) {
+		font-size: 10rem;
+		bottom: 30%;
+		left: -30%;
+		opacity: 0.05;
+	}
+	@media (min-width: 601px) and (max-width: 1024px) {
+	}
+`;
+
 const SliderContainer = styled.div`
 	display: block;
 	margin: auto;
-	padding: 2rem;
+	padding: 2rem 1rem;
 
 	@media (max-width: 600px) {
 		padding: 1rem;
@@ -57,6 +82,10 @@ const ButtonWrapper = styled.div`
 	justify-content: center;
 	/* padding */
 	padding-block: 2rem;
+
+	@media (max-width: 600px) {
+		padding: 4rem 0 0 0;
+	}
 `;
 
 export default function Projects() {
@@ -65,8 +94,9 @@ export default function Projects() {
 		speed: 1000,
 		slidesToShow: 3,
 		slidesToScroll: 1,
-		initialSlide: 0,
+		initialSlide: 1,
 		autoplay: true,
+		centerMode: true,
 		autoplaySpeed: 4000,
 		responsive: [
 			{
@@ -108,6 +138,7 @@ export default function Projects() {
 	];
 	return (
 		<Container>
+			<LargeText>PROJECTS</LargeText>
 			<Wrapper>
 				<HeaderComponent textColor='var(--TextMainColor)'>Projects</HeaderComponent>
 				<SliderContainer>

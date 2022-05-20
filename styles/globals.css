@@ -132,3 +132,9 @@ button {
 		margin-left: 2rem;
 	}
 }
+
+/* increase center image size */
+.slick-current {
+	transform: scale(1.08) !important;
+	transition: all 0.3s ease-in-out !important;
+}
