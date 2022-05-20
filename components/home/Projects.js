@@ -2,12 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import Slider from "react-slick";
 
-// react-slick css
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
 // shared components
 import HeaderComponent from "../shared/Header";
+import PrimaryButton from "../shared/PrimaryButton";
 
 // style
 const Container = styled.section`
@@ -16,7 +13,7 @@ const Container = styled.section`
 `;
 
 const Wrapper = styled.div`
-	width: 83%;
+	width: 90%;
 	margin: auto;
 
 	@media (max-width: 600px) {
@@ -48,11 +45,20 @@ const SliderImage = styled.img`
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
-	aspect-ratio: 1;
 	margin: auto;
+	cursor: pointer;
+	border-radius: 0.5rem;
 `;
 
-export default function Testimonial() {
+const ButtonWrapper = styled.div`
+	/* display */
+	display: flex;
+	justify-content: center;
+	/* padding */
+	padding-block: 2rem;
+`;
+
+export default function Projects() {
 	var settings = {
 		infinite: true,
 		speed: 1000,
@@ -92,26 +98,29 @@ export default function Testimonial() {
 			},
 		],
 	};
-	const testimonialsData = [
-		{ name: "Zeeshan Testimonials Image 1", imagePath: "/Testimonials/Testimonial1-min.png" },
-		{ name: "Zeeshan Testimonials Image 2", imagePath: "/Testimonials/Testimonial2-min.png" },
-		{ name: "Zeeshan Testimonials Image 3", imagePath: "/Testimonials/Testimonial3-min.png" },
-		{ name: "Zeeshan Testimonials Image 4", imagePath: "/Testimonials/Testimonial4-min.png" },
-		{ name: "Zeeshan Testimonials Image 5", imagePath: "/Testimonials/Testimonial5-min.png" },
+	const projectsData = [
+		{ name: "Zeeshan Projects Image 1", imagePath: "/Projects/Project1-min.png" },
+		{ name: "Zeeshan Projects Image 2", imagePath: "/Projects/Project2-min.png" },
+		{ name: "Zeeshan Projects Image 3", imagePath: "/Projects/Project3-min.png" },
+		{ name: "Zeeshan Projects Image 4", imagePath: "/Projects/Project4-min.png" },
+		{ name: "Zeeshan Projects Image 5", imagePath: "/Projects/Project5-min.png" },
 	];
 	return (
 		<Container>
 			<Wrapper>
-				<HeaderComponent textColor='var(--TextMainColor)'>Testimonials</HeaderComponent>
+				<HeaderComponent textColor='var(--TextMainColor)'>Projects</HeaderComponent>
 				<SliderContainer>
 					<Slider {...settings}>
-						{testimonialsData.map((item, id) => (
+						{projectsData.map((item, id) => (
 							<SliderBox key={id}>
 								<SliderImage src={item.imagePath} alt={item.name} loading='lazy' />
 							</SliderBox>
 						))}
 					</Slider>
 				</SliderContainer>
+				<ButtonWrapper>
+					<PrimaryButton>Explore More</PrimaryButton>
+				</ButtonWrapper>
 			</Wrapper>
 		</Container>
 	);

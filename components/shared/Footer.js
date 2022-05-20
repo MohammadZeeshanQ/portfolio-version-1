@@ -5,11 +5,13 @@ import Link from "next/link";
 // styled components
 const Container = styled.section`
 	position: relative;
+	padding-block: 4rem;
 `;
 
 const Wrapper = styled.div`
 	position: relative;
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
 	width: 84%;
 	margin: auto;
@@ -24,7 +26,6 @@ const Wrapper = styled.div`
 `;
 
 const LogoWrapper = styled.div`
-	flex-grow: 1;
 	display: flex;
 `;
 
@@ -50,7 +51,6 @@ const LogoImage = styled.img`
 // button Link
 const DesktopWrapper = styled.div`
 	display: flex;
-	flex-grow: 1;
 
 	@media (max-width: 600px) {
 		flex-direction: column;

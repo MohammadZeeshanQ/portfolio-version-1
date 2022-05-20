@@ -59,3 +59,76 @@ button {
 	/* color: var(--whiteColor);
 	background: var(--darkRedColor); */
 }
+
+/* React-Slider CSS */
+/* Arrow CSS */
+.slick-next {
+	right: -35px !important;
+}
+
+.slick-next:before {
+	color: var(--TextMainColor) !important;
+}
+
+.slick-prev {
+	left: -35px !important;
+}
+
+.slick-prev:before {
+	color: var(--TextMainColor) !important;
+}
+
+/* Dots Css */
+.slick-dots {
+	bottom: -60px;
+}
+
+.slick-dots li.slick-active button:before {
+	color: var(--TextMainColor) !important;
+	font-size: 1.4rem;
+}
+
+.slick-dots li button:before {
+	color: #818181 !important;
+	font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+	.slick-dots {
+		bottom: -50px !important;
+	}
+	.slick-dots li.slick-active button:before {
+		font-size: 1.2rem;
+	}
+
+	.slick-dots li button:before {
+		font-size: 0.7rem;
+	}
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+	.slick-dots {
+		bottom: -60px;
+	}
+	.slick-dots li.slick-active button:before {
+		font-size: 1rem;
+	}
+	.slick-dots li button:before {
+		font-size: 0.6rem;
+	}
+}
+
+@media (min-width: 1900px) {
+	.slick-dots {
+		bottom: -80px;
+	}
+	.slick-dots li.slick-active button:before {
+		font-size: 3rem;
+	}
+	.slick-dots li button:before {
+		font-size: 2.5rem;
+	}
+	.slick-dots li {
+		margin-left: 2rem;
+	}
+}
