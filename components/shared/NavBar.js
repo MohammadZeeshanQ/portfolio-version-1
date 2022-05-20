@@ -110,6 +110,11 @@ const CTAButtonTheme = styled.button`
 	letter-spacing: 1px;
 	padding: 0.8rem 1.5rem;
 
+	&:hover {
+		transform: translateY(-2px);
+		box-shadow: 2px 4px 10px #adadad;
+		transition: all 0.3s ease;
+	}
 	@media (max-width: 600px) {
 		font-size: var(--MobileFont);
 	}

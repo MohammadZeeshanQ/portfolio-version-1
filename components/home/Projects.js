@@ -153,7 +153,7 @@ export default function Projects() {
 		{ name: "Zeeshan Projects Image 5", imagePath: "/Projects/Project5-min.png" },
 	];
 	return (
-		<Container>
+		<Container id='portfolioSection'>
 			<LargeText>PROJECTS</LargeText>
 			<Wrapper>
 				<HeaderComponent textColor='var(--TextMainColor)'>Projects</HeaderComponent>

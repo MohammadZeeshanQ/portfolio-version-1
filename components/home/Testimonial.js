@@ -140,7 +140,7 @@ export default function Testimonial() {
 		{ name: "Zeeshan Testimonials Image 5", imagePath: "/Testimonials/Testimonial5-min.png" },
 	];
 	return (
-		<Container>
+		<Container id='testimonialsSection'>
 			<LargeText>TRUST</LargeText>
 			<Wrapper>
 				<HeaderComponent textColor='var(--TextMainColor)'>Testimonials</HeaderComponent>
