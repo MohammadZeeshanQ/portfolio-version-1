@@ -9,7 +9,6 @@ import PrimaryButton from "../shared/PrimaryButton";
 // style
 const Container = styled.section`
 	position: relative;
-	background-color: var(--ThirdColor);
 	padding: 4rem 0;
 	z-index: 0;
 	overflow: hidden;
@@ -85,6 +84,7 @@ const SliderImage = styled.img`
 	object-fit: contain;
 	margin: auto;
 	cursor: pointer;
+	box-shadow: 2px 4px 10px #adadad;
 	border-radius: 0.5rem;
 `;
 

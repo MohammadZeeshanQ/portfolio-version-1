@@ -27,10 +27,12 @@ const Container = styled.section`
 const opacity = keyframes`
   from {
 	opacity: 0;
+	transform: rotate(0deg);
   }
 
   to {
 	opacity: .8;
+	transform: rotate(360deg);
   }
 `;
 
@@ -40,13 +42,12 @@ const StarImage = styled.img`
 	top: -25%;
 	right: 5%;
 	/* size */
-	width: 3rem;
+	width: 4rem;
 	height: 100%;
 	object-fit: contain;
 	z-index: -1;
 	/* animation */
 	animation: ${opacity} 4s alternate infinite;
-	transform: rotate(120deg);
 
 	@media (max-width: 600px) {
 		width: 4rem;
@@ -61,14 +62,13 @@ const CodeImage = styled.img`
 	bottom: -30%;
 	left: 5%;
 	/* size */
-	width: 3rem;
+	width: 4rem;
 	height: 100%;
 	object-fit: contain;
 	z-index: -1;
 	/*  */
 	animation: ${opacity} 4s alternate infinite;
 	animation-delay: 1s;
-	transform: rotate(45deg);
 
 	@media (max-width: 600px) {
 		width: 4rem;
@@ -96,7 +96,7 @@ const HeaderBox = styled.div`
 
 const Header = styled.h1`
 	color: var(--TextMainColor);
-	font-size: 3.5rem;
+	font-size: 4.5rem;
 	font-weight: 700;
 	letter-spacing: 1px;
 
@@ -134,6 +134,10 @@ const ButtonBox = styled.div`
 	gap: 1rem;
 	/* margin */
 	margin-top: 4rem;
+
+	@media (max-width: 600px) {
+		flex-direction: column;
+	}
 `;
 
 export default function Hero() {

@@ -42,6 +42,8 @@ const Button = styled.button`
 	}
 	@media (max-width: 600px) {
 		font-size: var(--MobileFont);
+		width: 60%;
+		justify-content: space-around;
 	}
 	@media (min-width: 601px) and (max-width: 1024px) {
 		font-size: var(--TabletFontSmall);
