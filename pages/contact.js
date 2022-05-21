@@ -127,7 +127,7 @@ const SubmitButtonBox = styled.div`
 	}
 `;
 
-export default function contact() {
+export default function Contact() {
 	const [successOpen, setSuccessOpen] = useState(false);
 	const [errorOpen, setErrorOpen] = useState(false);
 	const emailService = process.env.EMAIL_SERVICE;
@@ -169,12 +169,12 @@ export default function contact() {
 							<Header>
 								<HeaderHighlight> Hi there,</HeaderHighlight>
 								<br />
-								Let's make something Great!
+								Let&apos;s make something Great!
 							</Header>
 							<Description>
-								I would gladly contribute to any of your projects, if you're looking for someone. I'm
-								here to help and answer any question you might have. I'm looking forward to hear from
-								you.
+								I would gladly contribute to any of your projects, if you&apos;re looking for someone.
+								I&apos;m here to help and answer any question you might have. I&apos;m looking forward
+								to hear from you.
 							</Description>
 						</MessageBox>
 					</Grid>
