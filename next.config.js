@@ -18,8 +18,8 @@ module.exports = {
 		EMAIL_TEMPLATE: process.env.EMAIL_TEMPLATE,
 		EMAIL_KEY: process.env.EMAIL_KEY,
 	},
-	// images: {
-	// 	loader: "imgix",
-	// 	path: "",
-	// },
+	images: {
+		loader: "imgix",
+		path: "",
+	},
 };
