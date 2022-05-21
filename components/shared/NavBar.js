@@ -8,6 +8,7 @@ import MobileDrawer from "./MobileDrawer.js";
 
 // icons
 import MenuIcon from "@mui/icons-material/Menu";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 // styled components
 const MainContainer = styled.section`
@@ -100,15 +101,21 @@ const CtaWrapper = styled.div`
 `;
 
 const CTAButtonTheme = styled.button`
+	/* display */
+	display: flex;
+	align-items: center;
+	/* color */
 	color: #fff;
 	background-color: var(--MainColor);
+	/* font */
 	font-size: 0.95rem;
 	font-weight: 500;
+	/* border */
 	border: none;
 	border-radius: 0.5rem;
 	cursor: pointer;
 	letter-spacing: 1px;
-	padding: 0.8rem 1.5rem;
+	padding: 0.8rem 1.2rem;
 
 	&:hover {
 		transform: translateY(-2px);
@@ -183,7 +190,10 @@ export default function NavBar() {
 
 						<CtaWrapper>
 							<Link href='/contact' passHref>
-								<CTAButtonTheme>Contact Me</CTAButtonTheme>
+								<CTAButtonTheme>
+									Contact Me
+									<ArrowForwardIosIcon fontSize='small' sx={{ marginLeft: "1rem" }} />
+								</CTAButtonTheme>
 							</Link>
 						</CtaWrapper>
 

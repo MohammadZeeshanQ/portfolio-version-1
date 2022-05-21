@@ -1,9 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { Grid, Divider } from "@mui/material";
+import { Grid } from "@mui/material";
 
 // shared components
+import HeaderComponent from "../shared/Header";
 import PrimaryButton from "../shared/PrimaryButton";
+
+// Icons
+import CallMadeIcon from "@mui/icons-material/CallMade";
 
 // style
 const Container = styled.section`
@@ -23,30 +27,17 @@ const Wrapper = styled.div`
 	}
 `;
 
-const HeaderWrapper = styled.div`
-	@media (max-width: 600px) {
-		text-align: center;
-		margin-bottom: 3rem;
-	}
+const ImageWrapper = styled.div``;
+
+const ImageBanner = styled.img`
+	/* size */
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
 `;
 
-const Header = styled.h2`
-	/* width */
-	max-width: 70%;
-	/* color */
-	color: var(--TextMainColor);
-	/* font */
-	font-size: 3.5rem;
-	letter-spacing: 1px;
-	text-transform: capitalize;
-
-	@media (max-width: 600px) {
-		font-size: 2rem;
-		max-width: 100%;
-	}
-	@media (min-width: 601px) and (max-width: 1024px) {
-		font-size: 2rem;
-	}
+const GridContainer = styled.div`
+	padding-top: 4rem;
 `;
 
 const ServiceWrapper = styled.div`
@@ -61,6 +52,7 @@ const ServiceWrapper = styled.div`
 `;
 
 const ServiceBox = styled.div`
+	/* display */
 	display: flex;
 	flex-wrap: wrap;
 	gap: 2rem;
@@ -92,9 +84,7 @@ const ServicesLine = styled.hr`
 	}
 `;
 
-const ServiceNumberBox = styled.div`
-	padding-block: 1rem;
-`;
+const ServiceNumberBox = styled.div``;
 
 const ServiceNumber = styled.p`
 	/* color */
@@ -125,16 +115,16 @@ const ServiceHeader = styled.h3`
 	/* color */
 	color: var(--TextMainColor);
 	/* font */
-	font-size: 3rem;
-	font-weight: 600;
+	font-size: 2rem;
+	font-weight: 700;
 	letter-spacing: 1px;
+	line-height: 1.5;
 	/* sizing  */
-	max-width: 70%;
+
 	text-transform: capitalize;
 
 	@media (max-width: 600px) {
 		font-size: 2.5rem;
-		max-width: 100%;
 		text-align: center;
 	}
 	@media (min-width: 601px) and (max-width: 1024px) {
@@ -161,34 +151,41 @@ export default function Services() {
 		{ number: "03", header: "Landing Page Creator", buttonLink: "" },
 	];
 	return (
-		<Container>
+		<Container id='servicesSection'>
 			<Wrapper>
-				<Grid container justifyContent='space-between'>
-					<Grid item xs={12} sm={4} md={4}>
-						<HeaderWrapper>
-							<Header>Services I Offer</Header>
-						</HeaderWrapper>
-					</Grid>
-					<Grid item xs={12} sm={7} md={7}>
-						{serviceData.map((item, id) => (
-							<ServiceWrapper key={id}>
-								<ServicesLine />
-								<ServiceBox>
-									<ServiceNumberBox>
-										<ServiceNumber>{item.number}</ServiceNumber>
-									</ServiceNumberBox>
+				<HeaderComponent>Services I Offer</HeaderComponent>
 
-									<ServiceTextWrapper>
-										<ServiceHeader>{item.header}</ServiceHeader>
-										<ButtonWrapper>
-											<PrimaryButton>Explore More</PrimaryButton>
-										</ButtonWrapper>
-									</ServiceTextWrapper>
-								</ServiceBox>
-							</ServiceWrapper>
-						))}
+				<GridContainer>
+					<Grid container justifyContent='space-between' alignItems='center'>
+						<Grid item xs={12} sm={5} md={5}>
+							<ImageWrapper>
+								<ImageBanner src='/Banners/LaptopBanner.png' alt='Zeeshan Laptop Banner' />
+							</ImageWrapper>
+						</Grid>
+						<Grid item xs={12} sm={6} md={6}>
+							{serviceData.map((item, id) => (
+								<ServiceWrapper key={id}>
+									<ServicesLine />
+									<ServiceBox>
+										<ServiceNumberBox>
+											<ServiceNumber>{item.number}</ServiceNumber>
+										</ServiceNumberBox>
+
+										<ServiceTextWrapper>
+											<ServiceHeader>{item.header}</ServiceHeader>
+											<ButtonWrapper>
+												<PrimaryButton>
+													Explore More
+													<CallMadeIcon fontSize='small' sx={{ marginLeft: "1rem" }} />
+												</PrimaryButton>
+											</ButtonWrapper>
+										</ServiceTextWrapper>
+									</ServiceBox>
+								</ServiceWrapper>
+							))}
+						</Grid>
 					</Grid>
-				</Grid>
+				</GridContainer>
 			</Wrapper>
 		</Container>
 	);

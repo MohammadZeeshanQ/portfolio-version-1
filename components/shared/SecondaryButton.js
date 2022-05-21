@@ -19,7 +19,7 @@ const Button = styled.button`
 	letter-spacing: 1px;
 	cursor: pointer;
 	/* margin and padding */
-	padding: 0.65rem 2rem;
+	padding: 0.7rem 1.2rem;
 
 	&:hover {
 		transform: translateY(-0.2rem) scale(1.01);
@@ -42,7 +42,6 @@ const Button = styled.button`
 	}
 	@media (max-width: 600px) {
 		font-size: var(--MobileFont);
-		width: 60%;
 		justify-content: space-around;
 	}
 	@media (min-width: 601px) and (max-width: 1024px) {

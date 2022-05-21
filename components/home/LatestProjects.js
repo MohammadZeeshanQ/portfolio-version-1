@@ -7,6 +7,9 @@ import { Grid, Divider } from "@mui/material";
 import HeaderComponent from "../shared/Header";
 import SecondaryButton from "../shared/SecondaryButton";
 
+// Icons
+import CallMadeIcon from "@mui/icons-material/CallMade";
+
 // style
 const Container = styled.section`
 	padding: 4rem 0;
@@ -107,7 +110,10 @@ export default function LatestProjects() {
 									<Header>{item.header}</Header>
 									<ButtonWrapper>
 										<Link href={item.buttonLink} passHref>
-											<SecondaryButton>Explore More</SecondaryButton>
+											<SecondaryButton>
+												Explore More
+												<CallMadeIcon fontSize='small' sx={{ marginLeft: "1rem" }} />
+											</SecondaryButton>
 										</Link>
 									</ButtonWrapper>
 									<ImageWrapper>

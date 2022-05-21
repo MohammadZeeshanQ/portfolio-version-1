@@ -11,7 +11,7 @@ export default function Header({ children, textColor }) {
 	const Header = styled.h2`
 		color: ${textColor};
 		/* font */
-		font-size: 2.5rem;
+		font-size: 3rem;
 		letter-spacing: 1px;
 		text-transform: capitalize;
 

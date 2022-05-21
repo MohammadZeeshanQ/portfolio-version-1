@@ -66,7 +66,7 @@ const CodeImage = styled.img`
 	height: 100%;
 	object-fit: contain;
 	z-index: -1;
-	/*  */
+	/* animation  */
 	animation: ${opacity} 4s alternate infinite;
 	animation-delay: 1s;
 

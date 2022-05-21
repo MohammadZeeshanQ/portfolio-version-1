@@ -6,6 +6,9 @@ import Slider from "react-slick";
 import HeaderComponent from "../shared/Header";
 import PrimaryButton from "../shared/PrimaryButton";
 
+// Icons
+import CallMadeIcon from "@mui/icons-material/CallMade";
+
 // style
 const Container = styled.section`
 	position: relative;
@@ -55,26 +58,35 @@ const LargeText = styled.p`
 
 const SliderContainer = styled.div`
 	display: block;
-	margin: auto;
+
+	/* width */
+	width: 70%;
+	/* margin and padding */
 	padding: 2rem 1rem;
+	margin: auto;
 
 	@media (max-width: 600px) {
 		padding: 1rem;
+		width: 95%;
 	}
 
 	@media (min-width: 601px) and (max-width: 1024px) {
 		padding: 0.5rem 0;
+		width: 80%;
 	}
 `;
 
 const SliderBox = styled.div`
+	height: 30rem;
 	padding: 1rem;
 
 	@media (max-width: 600px) {
-		padding: 0.5rem;
+		padding: 1rem;
+		height: 15rem;
 	}
 	@media (min-width: 601px) and (max-width: 1024px) {
 		padding: 0.5rem;
+		height: 20rem;
 	}
 `;
 
@@ -84,7 +96,7 @@ const SliderImage = styled.img`
 	object-fit: contain;
 	margin: auto;
 	cursor: pointer;
-	box-shadow: 2px 4px 10px #adadad;
+	/* box-shadow: 2px 4px 10px #adadad; */
 	border-radius: 0.5rem;
 `;
 
@@ -108,26 +120,19 @@ export default function Projects() {
 	var settings = {
 		infinite: true,
 		speed: 1000,
-		slidesToShow: 3,
+		slidesToShow: 1,
 		slidesToScroll: 1,
 		initialSlide: 1,
 		autoplay: true,
-		centerMode: true,
 		autoplaySpeed: 4000,
 		responsive: [
 			{
 				breakpoint: 1024,
-				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 1,
-					arrows: false,
-				},
+				settings: {},
 			},
 			{
 				breakpoint: 600,
 				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
 					initialSlide: 0,
 					dots: true,
 					arrows: false,
@@ -136,8 +141,6 @@ export default function Projects() {
 			{
 				breakpoint: 480,
 				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
 					initialSlide: 0,
 					dots: true,
 					arrows: false,
@@ -167,7 +170,9 @@ export default function Projects() {
 					</Slider>
 				</SliderContainer>
 				<ButtonWrapper>
-					<PrimaryButton>Explore More</PrimaryButton>
+					<PrimaryButton>
+						Explore More <CallMadeIcon fontSize='small' sx={{ marginLeft: "1rem" }} />
+					</PrimaryButton>
 				</ButtonWrapper>
 			</Wrapper>
 		</Container>
