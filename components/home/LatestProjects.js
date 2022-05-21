@@ -80,19 +80,19 @@ export default function LatestProjects() {
 	const gridDate = [
 		{
 			header: "Future Dimensions",
-			imagePath: "/newProjects/NewProject1-min.png",
+			imagePath: "/NewProjects/NewProject1-min.png",
 			buttonLink: "",
 			topMargin: { mt: { xs: 0, sm: 10, md: 14 } },
 		},
 		{
 			header: "Codebook.io",
-			imagePath: "/newProjects/NewProject2-min.png",
+			imagePath: "/NewProjects/NewProject2-min.png",
 			buttonLink: "",
 			topMargin: { mt: { xs: 0, sm: 4, md: 6 } },
 		},
 		{
 			header: "STAN Team",
-			imagePath: "/newProjects/NewProject3-min.png",
+			imagePath: "/NewProjects/NewProject3-min.png",
 			buttonLink: "",
 			topMargin: { mt: { xs: 0, sm: 0, md: 0 } },
 		},
