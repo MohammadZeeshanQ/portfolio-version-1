@@ -13,6 +13,11 @@ module.exports = {
 		});
 		return config;
 	},
+	env: {
+		EMAIL_SERVICE: process.env.EMAIL_SERVICE,
+		EMAIL_TEMPLATE: process.env.EMAIL_TEMPLATE,
+		EMAIL_KEY: process.env.EMAIL_KEY,
+	},
 	// images: {
 	// 	loader: "imgix",
 	// 	path: "",

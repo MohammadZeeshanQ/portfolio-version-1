@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Grid, Snackbar, Alert, AlertTitle } from "@mui/material";
+import { Grid, Snackbar, Alert, AlertTitle, TextField } from "@mui/material";
 
 // shared components
 import HeaderHighlight from "../components/shared/HeaderHighlight";
@@ -130,11 +130,9 @@ const SubmitButtonBox = styled.div`
 export default function contact() {
 	const [successOpen, setSuccessOpen] = useState(false);
 	const [errorOpen, setErrorOpen] = useState(false);
-	const emailService = process.env.NEXT_PUBLIC__EMAILSERVICE;
-	const emailTemplate = process.env.NEXT_PUBLIC__EMAILTEMPLATE;
-	const emailEmailKey = process.env.NEXT_PUBLIC__EMAILKEY;
-
-	console.log(emailService, emailTemplate);
+	const emailService = process.env.EMAIL_SERVICE;
+	const emailTemplate = process.env.EMAIL_TEMPLATE;
+	const emailEmailKey = process.env.EMAIL_KEY;
 
 	// send form handler
 	const sendEmail = (e) => {
@@ -184,27 +182,45 @@ export default function contact() {
 						<form onSubmit={sendEmail}>
 							<InputBox>
 								<InputDiv>
-									<Input type='text' id='personName' name='name' placeholder='Your Name' required />
+									<TextField
+										type='text'
+										id='personName'
+										name='name'
+										placeholder='Your Name'
+										required
+										fullWidth={true}
+									/>
 								</InputDiv>
 								<InputDiv>
-									<Input
+									<TextField
 										type='email'
 										id='personEmail'
 										name='email'
 										placeholder='Your Email'
 										required
+										fullWidth={true}
 									/>
 								</InputDiv>
 								<InputDiv>
-									<Input type='text' id='Subject' name='subject' placeholder='Subject' required />
+									<TextField
+										type='text'
+										id='Subject'
+										name='subject'
+										placeholder='Subject'
+										required
+										fullWidth={true}
+									/>
 								</InputDiv>
 								<InputDiv>
-									<Input
+									<TextField
 										type='text'
 										id='personMessage'
 										name='message'
 										placeholder='Your Message'
 										required
+										fullWidth={true}
+										multiline={true}
+										rows={4}
 									/>
 								</InputDiv>
 								<SubmitButtonBox>

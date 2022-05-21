@@ -1,6 +1,8 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
+require("dotenv").config();
+
 export default class MyDocument extends Document {
 	render() {
 		return (
