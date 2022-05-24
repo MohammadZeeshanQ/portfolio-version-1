@@ -68,7 +68,7 @@ const ServiceBox = styled.div`
 `;
 
 const ServicesLine = styled.hr`
-	width: 90%;
+	width: 100%;
 	height: 3px;
 	background: var(--TextMainColor);
 	border: 2px solid var(--TextMainColor);
@@ -115,7 +115,7 @@ const ServiceHeader = styled.h3`
 	/* color */
 	color: var(--TextMainColor);
 	/* font */
-	font-size: 2rem;
+	font-size: 2.2rem;
 	font-weight: 700;
 	letter-spacing: 1px;
 	line-height: 1.5;
@@ -124,7 +124,7 @@ const ServiceHeader = styled.h3`
 	text-transform: capitalize;
 
 	@media (max-width: 600px) {
-		font-size: 2.5rem;
+		font-size: 2rem;
 		text-align: center;
 	}
 	@media (min-width: 601px) and (max-width: 1024px) {
@@ -157,12 +157,12 @@ export default function Services() {
 
 				<GridContainer>
 					<Grid container justifyContent='space-between' alignItems='center'>
-						<Grid item xs={12} sm={5} md={5}>
+						<Grid item xs={12} sm={6} md={6}>
 							<ImageWrapper>
 								<ImageBanner src='/Banners/LaptopBanner.png' alt='Zeeshan Laptop Banner' />
 							</ImageWrapper>
 						</Grid>
-						<Grid item xs={12} sm={6} md={6}>
+						<Grid item xs={12} sm={5} md={5}>
 							{serviceData.map((item, id) => (
 								<ServiceWrapper key={id}>
 									<ServicesLine />

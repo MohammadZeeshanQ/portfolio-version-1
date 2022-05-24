@@ -67,7 +67,7 @@ const DesktopWrapper = styled.div`
 
 const ButtonBox = styled.div`
 	margin: 0 0.5rem;
-	padding: 0.5rem;
+	padding: 0.5rem 1rem;
 	border-radius: 0.3rem;
 	border: 1px white solid;
 	cursor: pointer;

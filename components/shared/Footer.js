@@ -13,6 +13,7 @@ const Wrapper = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	/* width */
 	width: 84%;
 	margin: auto;
 
@@ -64,9 +65,8 @@ const DesktopWrapper = styled.div`
 
 const ButtonBox = styled.div`
 	margin: 0 0.5rem;
-	padding: 0.5rem;
+	padding: 0.5rem 1rem;
 	border-radius: 0.3rem;
-	border: 1px white solid;
 	cursor: pointer;
 
 	&:hover {
@@ -75,6 +75,7 @@ const ButtonBox = styled.div`
 	}
 	@media (max-width: 600px) {
 		text-align: center;
+		margin: 0.5rem 0;
 	}
 `;
 
@@ -91,6 +92,9 @@ const DesktopButton = styled.button`
 	${ButtonBox}:hover & {
 		color: #fff;
 		transition: all 0.2s ease-in-out;
+	}
+	@media (max-width: 600px) {
+		padding-block: 0.5rem;
 	}
 	@media (min-width: 601px) and (max-width: 1024px) {
 		font-size: var(--TabletFontSmall);
